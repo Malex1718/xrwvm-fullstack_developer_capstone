@@ -1,68 +1,101 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Best Cars</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+<body>
+    <!-- Navigation -->
+    <div class="navitems">
+        <a href="/" class="nav_item"><i data-lucide="home" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle;"></i> Home</a>
+        <a href="/about" class="nav_item"><i data-lucide="info" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle;"></i> <strong>About Us</strong></a>
+        <a href="/contact" class="nav_item"><i data-lucide="phone" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle;"></i> Contact</a>
     </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- About Header con el div requerido -->
+        <div class="about-header">
+            <div class="title">
+                <i data-lucide="building-2" style="width: 32px; height: 32px; display: inline-block; vertical-align: middle;"></i>
+                <h1 style="display: inline-block; vertical-align: middle;">About Us</h1>
+            </div>
+            <div class="details">
+                Welcome to Best Cars dealership, home to the best cars in North America. We deal in sale of domestic and imported cars at reasonable prices.
+            </div>
         </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
+        <!-- Content Cards -->
+        <div class="card">
+            <div class="title">
+                <i data-lucide="book-open" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle;"></i> Our Story
+            </div>
+            <div class="details">
+                Founded in 2010, Best Cars has been the premier destination for quality vehicles in North America. With over 14 years of experience serving our community, we've built a reputation for excellence, integrity, and outstanding customer service.
+            </div>
         </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
 
+        <div class="card">
+            <div class="title">
+                <i data-lucide="target" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle;"></i> Our Mission
+            </div>
+            <div class="details">
+                To provide our customers with the best selection of quality vehicles at competitive prices, backed by exceptional service and support throughout their ownership experience.
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title">
+                <i data-lucide="check-circle" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle;"></i> Why Choose Best Cars?
+            </div>
+            <div class="details">
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; color: rgb(97, 64, 128);"></i> Extensive selection of new and certified pre-owned vehicles</li>
+                    <li><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; color: rgb(97, 64, 128);"></i> Competitive pricing and flexible financing options</li>
+                    <li><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; color: rgb(97, 64, 128);"></i> Award-winning customer service team</li>
+                    <li><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; color: rgb(97, 64, 128);"></i> State-of-the-art service center</li>
+                    <li><i data-lucide="check" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; color: rgb(97, 64, 128);"></i> Lifetime warranty on all new vehicles</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Team Member Card -->
+        <div class="card">
+            <div class="title">
+                <i data-lucide="users" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle;"></i> Meet Our Team
+            </div>
+            <div class="row">
+                <div style="text-align: center; flex: 1;">
+                    <i data-lucide="user-circle" style="width: 100px; height: 100px; color: rgb(97, 64, 128); margin-bottom: 10px;"></i>
+                    <div class="details">
+                        <strong>Michael Johnson</strong><br>
+                        <i data-lucide="briefcase" style="width: 16px; height: 16px; display: inline-block;"></i> CEO & Founder<br>
+                        <small>20+ years of automotive experience</small>
+                    </div>
+                </div>
+                <div style="text-align: center; flex: 1;">
+                    <i data-lucide="user-circle" style="width: 100px; height: 100px; color: rgb(97, 64, 128); margin-bottom: 10px;"></i>
+                    <div class="details">
+                        <strong>Sarah Williams</strong><br>
+                        <i data-lucide="briefcase" style="width: 16px; height: 16px; display: inline-block;"></i> Sales Manager<br>
+                        <small>Customer satisfaction specialist</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="details" style="text-align: center; margin-top: 50px; padding: 20px; background-color: rgb(97, 64, 128); color: white;">
+        <p>&copy; 2024 Best Cars Dealership. All rights reserved.</p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
