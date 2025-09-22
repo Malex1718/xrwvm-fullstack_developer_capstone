@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Best Cars</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+</head>
+<body>
+    <div class="navitems">
+        <a href="/" class="nav_item">Home</a>
+        <a href="/about" class="nav_item">About Us</a>
+        <a href="/contact" class="nav_item">Contact</a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card" style="max-width: 500px; margin: auto; border: rgb(103, 102, 105) 3px solid;">
+            <div class="title">Sign Up</div>
+            <div class="details">
+                <form id="registerForm">
+                    <div class="form-group mb-3">
+                        <label>Username:</label>
+                        <input type="text" id="userName" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>First Name:</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Last Name:</label>
+                        <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Email:</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Password:</label>
+                        <input type="password" id="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-block" style="background-color: rgb(97, 64, 128); color: white;">Register</button>
+                </form>
+                <p class="mt-3 text-center">
+                    Already have an account? <a href="/login" style="color: rgb(97, 64, 128);">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const response = await fetch('/djangoapp/register', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                userName: document.getElementById('userName').value,
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            })
+        });
+        const data = await response.json();
+        if (data.status) {
+            sessionStorage.setItem('username', data.userName);
+            alert('Registration successful! Welcome ' + data.userName);
+            window.location.href = '/';
+        } else {
+            alert(data.error || 'Registration failed!');
+        }
+    });
+    </script>
+</body>
+</html>

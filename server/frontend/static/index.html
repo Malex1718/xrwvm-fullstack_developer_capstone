@@ -116,5 +116,34 @@
     <script>
         lucide.createIcons();
     </script>
+    <script>
+        // Check if user is logged in
+        window.onload = function() {
+            const username = sessionStorage.getItem('username');
+            if (username) {
+                // Add welcome message to navigation
+                const nav = document.querySelector('.navitems');
+                if (nav) {
+                    nav.innerHTML += `
+                        <div style="float: right; margin-right: 20px;">
+                            Welcome, ${username}! 
+                            <a href="#" onclick="logout()" class="nav_item">Logout</a>
+                        </div>
+                    `;
+                }
+            }
+        }
+        
+        function logout() {
+            if(confirm('Are you sure you want to logout?')) {
+                fetch('/djangoapp/logout')
+                    .then(() => {
+                        sessionStorage.removeItem('username');
+                        alert('Logout successful!');
+                        window.location.reload();
+                    });
+            }
+        }
+    </script>
 </body>
 </html>
