@@ -1,7 +1,7 @@
 # djangoapp/restapis.py
 import requests
 import json
-from .models import CarDealer, DealerReview
+# from .models import CarDealer, DealerReview  # No necesario - datos vienen de MongoDB
 from requests.auth import HTTPBasicAuth
 import os
 from dotenv import load_dotenv
